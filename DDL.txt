@@ -14,11 +14,11 @@ CREATE TABLE `Menu` (
   `menu_index` int(11) NOT NULL,
   `menu_name` varchar(45) DEFAULT NULL,
   `menu_price` varchar(45) DEFAULT NULL,
-  `res_index` int(11) DEFAULT NULL,
+  `res_index` int(11) UNSIGNED NOT NULL,
   PRIMARY KEY (`menu_index`),
   KEY `res_index_idx` (`res_index`),
   CONSTRAINT `res_index` FOREIGN KEY (`res_index`) REFERENCES `restaurant` (`res_index`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 
 
